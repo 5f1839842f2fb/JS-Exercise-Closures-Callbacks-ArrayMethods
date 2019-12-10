@@ -307,9 +307,11 @@ function counterMaker() {
 */
 function counterMakerWithLimit(maxvalue) {
   let count = 0;
+  
   return function counter() {
     if (count > maxvalue) {
-      return count = 0;
+      count = 0
+      return count++;
     }
     return count++;
   };
